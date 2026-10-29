@@ -1,0 +1,17 @@
+{% from 'bootstrap5/form.html' import render_form %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hi</title>
+    </head>
+    <body>
+        <h1>Goal vector: {{goal_vector}}</h1>
+        <h2>Goal word: {{goal_word}}</h2>
+        <h3>Goal ipa: {{goal_ipa}}</h2>
+        {{render_form(form)}}
+        {{render_form(reroll_form)}}
+        {% for word, score in pairs %}
+            <p>{{word}} : {{score}}</p>
+        {% endfor %}
+    </body>
+</html>
